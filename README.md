@@ -1,77 +1,115 @@
-🚀 Space Missions Data Analysis
-Analyze and visualize historical space mission data to gain insights into mission trends, success rates, companies involved, and more using Python.
+🚀 Space Missions Data Analysis using Python
+This project performs a complete data analysis pipeline on historical space mission data. It explores trends in launches, success rates, launch costs, launch locations, and companies. It includes data cleaning, exploratory data analysis (EDA), visualizations, summary statistics, and saves the processed data for future use.
 
-📁 Project Structure
+📌 Features
+Data Loading & Cleaning:
+
+Loads the space_missions.csv dataset.
+
+Cleans the column names (e.g., removing newline characters, standardizing names).
+
+Converts the Date column to datetime format and extracts Year and Month.
+
+Cleans the Price column by removing non-numeric symbols and converting to float.
+
+Exploratory Data Analysis (EDA):
+
+Displays the first few rows and summary statistics of the dataset.
+
+Shows the number of missions per year using a bar plot.
+
+Visualizes the distribution of mission status (Success, Failure, etc.).
+
+Displays success rate over time as a line chart.
+
+Shows the top 10 companies by number of missions.
+
+Analyzes rocket status distribution (Active vs Retired).
+
+Shows the top 10 launch locations.
+
+Plots the average mission cost per year (if data is available).
+
+Data Output:
+
+Saves a cleaned and enriched version of the dataset as processed_space_missions.csv.
+
+📁 File Structure
+space_missions.csv: Original raw dataset.
+
+space_missions_analysis.py: Main script for analysis, visualization, and preprocessing.
+
+processed_space_missions.csv: Output file with cleaned and enhanced data.
+
+README.md: Project documentation file (you are reading it!).
+
+📦 Prerequisites
+Ensure the following libraries are installed before running the script:
+
 bash
 Copy
 Edit
-space_missions_analysis/
-│
-├── space_missions.csv              # Raw dataset
-├── processed_space_missions.csv    # Cleaned and enriched dataset (output)
-├── space_missions_analysis.py      # Main Python analysis script
-└── README.md                       # Documentation
-💾 Installation Requirements
-Before running the project, ensure you have the following Python libraries installed:
-
-nginx
-Copy
-Edit
 pip install pandas matplotlib seaborn
-If you're using additional features (like OCR, audio, or NLP), you might also need:
+▶️ How to Run the Script
+Make sure the file space_missions.csv is in the same directory as space_missions_analysis.py.
 
-nginx
-Copy
-Edit
-pip install PyPDF2 pytesseract pdf2image gTTS pygame transformers
-📊 Exploratory Data Analysis (EDA) & Insights
-This project performs a thorough analysis of global space missions. Key operations include:
+Open a terminal or command prompt and navigate to the project folder.
 
-Data Cleaning:
+Run the script:
 
-Fixes column names by removing line breaks.
-
-Converts Date to datetime format and extracts Year and Month.
-
-Cleans Price values and converts them to numeric for analysis.
-
-Visualizations:
-
-Number of Missions Over Time – Bar plot of mission count per year.
-
-Mission Status Distribution – Bar chart showing counts of Success, Failure, etc.
-
-Success Rate Over Time – Line graph showing yearly success rate (%).
-
-Top 10 Companies by Number of Missions – Most active space companies.
-
-Average Mission Cost Over Time – Yearly trend in mission prices (if data available).
-
-Rocket Status Distribution – Pie chart of active vs retired rockets.
-
-Top 10 Launch Locations – Bar plot of most used launchpads worldwide.
-
-Summary Output (in terminal):
-
-Total number of missions.
-
-Overall success rate.
-
-Average mission cost (if available).
-
-Output File:
-
-Cleaned dataset is saved as processed_space_missions.csv.
-
-✅ How to Run
-Ensure space_missions.csv is in the project folder.
-
-Open your terminal or IDE and run:
-
-nginx
+bash
 Copy
 Edit
 python space_missions_analysis.py
-🛰️ Credits
-Dataset Source: [UCI / Kaggle / Public Domain Dataset]
+The script will output:
+
+Initial dataset preview and statistics.
+
+Cleaned column names and new columns (Year, Month).
+
+Visualizations (displayed in separate windows).
+
+Total missions, overall success rate, and average mission cost.
+
+A new file named processed_space_missions.csv will be saved with the cleaned data.
+
+🔁 Workflow Overview
+Load Data: Import the space mission dataset from CSV.
+
+Clean Data:
+
+Standardize column names.
+
+Convert date to datetime and extract year/month.
+
+Clean and convert cost data.
+
+Explore & Visualize:
+
+Plot number of missions per year.
+
+Show mission success/failure distribution.
+
+Plot success rate and mission costs over time.
+
+Display top companies and launch locations.
+
+Save Output:
+
+Store cleaned data to processed_space_missions.csv.
+
+💡 Potential Enhancements
+Country-wise Analysis: Group mission data by country to analyze space race trends globally.
+
+Predictive Modeling: Use ML models to predict mission success based on input features like company, location, price, etc.
+
+Interactive Dashboard: Build a Streamlit or Plotly Dash web app for exploring the data interactively.
+
+Hyperparameter Analysis: If extended to classification tasks, use GridSearchCV for tuning.
+
+Time Series Forecasting: Predict future space missions or costs using historical trends.
+
+🙌 Acknowledgments
+Dataset Source: [Public Dataset — UCI / Kaggle / SpaceX / Wikipedia]
+
 Developed by: Your Name
